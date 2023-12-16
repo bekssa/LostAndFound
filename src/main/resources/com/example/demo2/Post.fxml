@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.PostController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#092635" height="200.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+            <ImageView fx:id="imageIcon" fitHeight="190.0" fitWidth="153.0" layoutX="19.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="statusType" prefHeight="22.0" prefWidth="180.0" text="set " textFill="#092635" />
+      <TextArea fx:id="commentArea" editable="false" prefHeight="78.0" prefWidth="180.0" promptText="set comment" />
+      <TextField fx:id="fullNameField" editable="false" prefHeight="42.0" prefWidth="180.0" promptText="set name" />
+   </children>
+</VBox>

@@ -2,8 +2,8 @@ package com.example.demo2;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.channels.ConnectionPendingException;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -66,7 +66,18 @@ public class LostloginConstructor {
                                 int storedPassword = Integer.parseInt(resultSet.getString("password"));
                                 int usersPassword  = passText.getText().hashCode();
                                     if(storedPassword == usersPassword){
-                                        System.out.println("URAAAAAAAAAAAAAAAA");
+                                        login.getScene().getWindow().hide();
+                                        FXMLLoader forSignUp = new FXMLLoader(Controller.class.getResource("MainPage.fxml"));
+                                        try {
+                                            forSignUp.load();
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+                                        Parent root = forSignUp.getRoot();
+                                        Stage stage = new Stage();
+                                        stage.setTitle("LostAndFound");
+                                        stage.setScene(new Scene(root));
+                                        stage.show();
                                     }
                                     else new alertException().setAlert();
                             }
